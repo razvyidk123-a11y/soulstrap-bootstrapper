@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>SoulStrap</AssemblyName>
+    <RootNamespace>SoulStrap</RootNamespace>
+    <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Version>1.0.0</Version>
+    <Company>SoulStrap</Company>
+    <Product>SoulStrap</Product>
+    <Description>A Roblox bootstrapper with FastFlag editor, auto-updater, and theme support.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+</Project>
+dotnet restore
+dotnet publish -c Releasae -r
+win-x64 --self-contained true
+-p:PublishSingleFile=true
+-o /publish
